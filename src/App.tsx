@@ -1,10 +1,21 @@
 import './App.css';
+import ActionButtons from './components/ActionButtons';
+import ImageCarousel from './components/ImageCarousel';
+import Nav from './components/Nav';
+import ProductInfo from './components/ProductInfo';
 
 function App() {
   return (
-    <div>
-      <h1>Hello World!</h1>
-    </div>
+    <>
+      <Nav />
+      <main>
+        <ImageCarousel />
+        <div>
+          <ProductInfo />
+          <ActionButtons />
+        </div>
+      </main>
+    </>
   );
 }
 
