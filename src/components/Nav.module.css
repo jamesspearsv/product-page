@@ -1,0 +1,45 @@
+.nav {
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 5rem;
+}
+
+.listContainer {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.wordmark {
+  font-size: 2rem;
+  font-weight: var(--weight-bold);
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  gap: 1.75rem;
+}
+
+.list li {
+  color: var(--color-grayish-blue);
+}
+
+.actionContainer {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  height: 100%;
+}
+
+.icon {
+  color: var(--color-grayish-blue);
+}
+
+.actionContainer img {
+  height: 50%;
+  width: auto;
+}
