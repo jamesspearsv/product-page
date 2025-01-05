@@ -2,10 +2,10 @@
 
 This is a running list of future tasks to complete for this project.
 
+- [x] Set up image viewer component
+- [x] Style image viewer component
+- [x] Implement image viewer functionality
 - [ ] Finish nav styling
-- [ ] Set image viewer component
-- [ ] Style image viewer component
-- [ ] Implement image viewer functionality
 - [ ] Set up product info component
 - [ ] Style product info component
 - [ ] Implement cart state management

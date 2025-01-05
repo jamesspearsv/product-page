@@ -14,9 +14,11 @@ export default function ProductPage() {
         marginTop: '3rem',
       }}
     >
-      <ImageViewer product={product} />
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <ImageViewer product={product} />
+      </div>
       <div>
-        <ProductInfo />
+        <ProductInfo product={product} />
         <ActionButtons />
       </div>
     </div>
