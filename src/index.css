@@ -11,6 +11,7 @@
   --font-size: 16px;
   --weight-normal: 400;
   --weight-bold: 700;
+  --container-padding: 0 7rem;
 }
 
 * {
@@ -24,4 +25,8 @@ html {
   color: var(--color-very-dark-blue);
   font-family: 'Kumbh Sans', sans-serif;
   font-size: 16px;
+}
+
+img {
+  display: block;
 }

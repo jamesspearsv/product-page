@@ -1,10 +1,10 @@
 .nav {
-  height: 6rem;
+  height: 7rem;
   display: flex;
   align-items: center;
   width: 100%;
   justify-content: space-between;
-  padding: 0 5rem;
+  padding: var(--container-padding);
 }
 
 .listContainer {
