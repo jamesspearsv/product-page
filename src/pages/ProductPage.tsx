@@ -20,7 +20,7 @@ export default function ProductPage({ cart, updateCart }: ProductPageProps) {
       }}
     >
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <ImageViewer product={product} />
+        <ImageViewer product={product} preview />
       </div>
       <div>
         <ProductInfo product={product} />

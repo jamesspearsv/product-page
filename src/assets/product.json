@@ -5,20 +5,20 @@
   "sale_usd": 125.0,
   "images": {
     "image1": {
-      "main": "/public/images/image-product-1.jpg",
-      "thumbnail": "/public/images/image-product-1-thumbnail.jpg"
+      "main": "/images/image-product-1.jpg",
+      "thumbnail": "/images/image-product-1-thumbnail.jpg"
     },
     "image2": {
-      "main": "/public/images/image-product-2.jpg",
-      "thumbnail": "/public/images/image-product-2-thumbnail.jpg"
+      "main": "/images/image-product-2.jpg",
+      "thumbnail": "/images/image-product-2-thumbnail.jpg"
     },
     "image3": {
-      "main": "/public/images/image-product-3.jpg",
-      "thumbnail": "/public/images/image-product-3-thumbnail.jpg"
+      "main": "/images/image-product-3.jpg",
+      "thumbnail": "/images/image-product-3-thumbnail.jpg"
     },
     "image4": {
-      "main": "/public/images/image-product-4.jpg",
-      "thumbnail": "/public/images/image-product-4-thumbnail.jpg"
+      "main": "/images/image-product-4.jpg",
+      "thumbnail": "/images/image-product-4-thumbnail.jpg"
     }
   }
 }
