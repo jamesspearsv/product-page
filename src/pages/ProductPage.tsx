@@ -1,7 +1,6 @@
 import ActionButtons from '../components/ActionButtons';
 import ImageViewer from '../components/ImageViewer';
 import ProductInfo from '../components/ProductInfo';
-import PRODUCT from '../assets/product.json';
 import { Cart, cartUpdater } from '../types/cart';
 import { useState } from 'react';
 import { Product } from '../types/product';
@@ -14,7 +13,7 @@ type ProductPageProps = {
 };
 
 export default function ProductPage({
-  product = PRODUCT,
+  product,
   cart,
   updateCart,
 }: ProductPageProps) {

@@ -10,5 +10,6 @@ This is a running list of future tasks to complete for this project.
 - [x] Style product info component
 - [x] Implement cart state management
 - [x] Add ability to add and remove items in cart
-- [ ] Build lightbox component
-- [ ] Add cart preview UI
+- [x] Build lightbox component
+- [x] Style lightbox component
+- [x] Add cart preview UI

@@ -28,6 +28,7 @@ export default function ActionButtons({
     const item = {
       name: product.product_name,
       price: product.sale_usd || product.price_usd,
+      image: product.images.image1.thumbnail,
     };
 
     updateCart('add', item);
@@ -37,6 +38,7 @@ export default function ActionButtons({
     const item = {
       name: product.product_name,
       price: product.sale_usd || product.price_usd,
+      image: product.images.image1.thumbnail,
     };
 
     updateCart('increment', item);
@@ -46,6 +48,7 @@ export default function ActionButtons({
     const item = {
       name: product.product_name,
       price: product.sale_usd || product.price_usd,
+      image: product.images.image1.thumbnail,
     };
 
     updateCart('decrement', item);

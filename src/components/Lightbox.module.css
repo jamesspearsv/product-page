@@ -43,7 +43,8 @@
 
 .viewerContainer {
   display: flex;
-  justify-content: space-between;
+  gap: 0;
+  justify-content: center;
   align-items: center;
 
   button {
@@ -51,17 +52,10 @@
     border-radius: 100%;
     border: none;
     padding: 0.5rem 0.6rem;
+    transform: translateY(-2rem);
   }
 
   button:hover {
     color: var(--color-orange);
-  }
-
-  button:first-child {
-    transform: translate(2rem, -2.5rem);
-  }
-
-  button:last-child {
-    transform: translate(-2rem, -2.5rem);
   }
 }

@@ -3,6 +3,7 @@ import ProductPage from './pages/ProductPage';
 import styles from './App.module.css';
 import { useState } from 'react';
 import { Cart, cartUpdater } from './types/cart';
+import PRODUCT from './assets/product.json';
 
 function App() {
   /*
@@ -41,9 +42,9 @@ function App() {
 
   return (
     <>
-      <Nav />
+      <Nav cart={cart} />
       <main className={styles.container}>
-        <ProductPage cart={cart} updateCart={updateCart} />
+        <ProductPage cart={cart} updateCart={updateCart} product={PRODUCT} />
       </main>
     </>
   );
