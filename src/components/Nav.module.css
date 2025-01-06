@@ -1,16 +1,18 @@
 .nav {
-  height: 7rem;
+  height: 6rem;
   display: flex;
   align-items: center;
   width: 100%;
   justify-content: space-between;
   padding: var(--container-padding);
+  border-bottom: solid 1px var(--color-light-grayish-blue);
 }
 
 .listContainer {
   display: flex;
   gap: 3rem;
   align-items: center;
+  height: 100%;
 }
 
 .wordmark {
@@ -22,10 +24,18 @@
   list-style: none;
   display: flex;
   gap: 1.75rem;
-}
+  height: 100%;
 
-.list li {
-  color: var(--color-grayish-blue);
+  li {
+    align-content: center;
+    color: var(--color-grayish-blue);
+    height: 100%;
+    border-bottom: solid 2px var(--color-white);
+  }
+
+  li:hover {
+    border-bottom: solid 2px var(--color-orange);
+  }
 }
 
 .actionContainer {
@@ -33,6 +43,11 @@
   gap: 3rem;
   align-items: center;
   height: 100%;
+
+  img:hover {
+    border: solid 2px var(--color-orange);
+    border-radius: 50px;
+  }
 }
 
 .icon {
