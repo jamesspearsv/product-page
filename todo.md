@@ -13,3 +13,4 @@ This is a running list of future tasks to complete for this project.
 - [x] Build lightbox component
 - [x] Style lightbox component
 - [x] Add cart preview UI
+- [ ] begin mobile styles
