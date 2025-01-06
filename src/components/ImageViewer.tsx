@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Product } from '../product';
+import { Product } from '../types/product';
 import styles from './ImageViewer.module.css';
 
 type ImageViewerProps = {

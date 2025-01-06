@@ -4,7 +4,6 @@ import ProductInfo from '../components/ProductInfo';
 import product from '../assets/product.json';
 
 export default function ProductPage() {
-  console.log(product);
   return (
     <div
       style={{
@@ -19,7 +18,7 @@ export default function ProductPage() {
       </div>
       <div>
         <ProductInfo product={product} />
-        <ActionButtons />
+        <ActionButtons product={product} />
       </div>
     </div>
   );
