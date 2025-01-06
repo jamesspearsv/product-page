@@ -37,10 +37,12 @@
   height: 100%;
 }
 
-.previews div.active {
+.previews div.active,
+.previews div:hover {
   border-color: var(--color-orange);
 }
 
-.active img {
+.active img,
+.previews img:hover {
   opacity: 50%;
 }

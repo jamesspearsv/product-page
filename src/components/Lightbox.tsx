@@ -4,9 +4,9 @@ import { Product } from '../types/product';
 import ImageViewer from './ImageViewer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
+  faArrowLeft,
+  faArrowRight,
   faClose,
-  faChevronLeft,
-  faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 
 type LightBoxProps = {
@@ -38,17 +38,35 @@ export default function LightBox({
     }
   }, [open]);
 
+  function handleImageChange(action: 'next' | 'back') {
+    let index = images.findIndex((image) => image === activeImage);
+
+    if (action === 'next') {
+      index = index < images.length - 1 ? index + 1 : 0;
+    }
+
+    if (action === 'back') {
+      index = index > 0 ? index - 1 : images.length - 1;
+    }
+
+    setActiveImage(images[index]);
+  }
+
   return (
     <dialog ref={modalRef} className={styles.lightbox}>
       <div>
         <div className={styles.closeContainer}>
           <button onClick={closeLightBox} className={styles.closeButton}>
-            <FontAwesomeIcon className={styles.closeIcon} icon={faClose} />
+            <FontAwesomeIcon
+              className={styles.closeIcon}
+              icon={faClose}
+              size="xl"
+            />
           </button>
         </div>
         <div className={styles.viewerContainer}>
-          <button>
-            <FontAwesomeIcon icon={faChevronLeft} />
+          <button onClick={() => handleImageChange('back')}>
+            <FontAwesomeIcon icon={faArrowLeft} size="2x" />
           </button>
           <ImageViewer
             product={product}
@@ -56,8 +74,8 @@ export default function LightBox({
             activeImage={activeImage}
             setActiveImage={setActiveImage}
           />
-          <button>
-            <FontAwesomeIcon icon={faChevronRight} />
+          <button onClick={() => handleImageChange('next')}>
+            <FontAwesomeIcon icon={faArrowRight} size="2x" />
           </button>
         </div>
       </div>

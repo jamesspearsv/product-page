@@ -37,6 +37,10 @@
   color: var(--color-white);
 }
 
+.closeIcon:hover {
+  color: var(--color-orange);
+}
+
 .viewerContainer {
   display: flex;
   justify-content: space-between;
@@ -46,5 +50,18 @@
     background-color: var(--color-white);
     border-radius: 100%;
     border: none;
+    padding: 0.5rem 0.6rem;
+  }
+
+  button:hover {
+    color: var(--color-orange);
+  }
+
+  button:first-child {
+    transform: translate(2rem, -2.5rem);
+  }
+
+  button:last-child {
+    transform: translate(-2rem, -2.5rem);
   }
 }
