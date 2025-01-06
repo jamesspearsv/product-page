@@ -1,18 +1,30 @@
 import { useRef, useEffect } from 'react';
 import styles from './Lightbox.module.css';
-import ImageViewer from './ImageViewer';
 import { Product } from '../types/product';
+import ImageViewer from './ImageViewer';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faClose,
+  faChevronLeft,
+  faChevronRight,
+} from '@fortawesome/free-solid-svg-icons';
 
 type LightBoxProps = {
   open: boolean;
   closeLightBox: () => void;
   product: Product;
+  images: string[];
+  activeImage: string;
+  setActiveImage: (image: string) => void;
 };
 
 export default function LightBox({
   open,
   closeLightBox,
   product,
+  images,
+  activeImage,
+  setActiveImage,
 }: LightBoxProps) {
   const modalRef = useRef<HTMLDialogElement>(null);
 
@@ -29,7 +41,25 @@ export default function LightBox({
   return (
     <dialog ref={modalRef} className={styles.lightbox}>
       <div>
-        <ImageViewer product={product} />
+        <div className={styles.closeContainer}>
+          <button onClick={closeLightBox} className={styles.closeButton}>
+            <FontAwesomeIcon className={styles.closeIcon} icon={faClose} />
+          </button>
+        </div>
+        <div className={styles.viewerContainer}>
+          <button>
+            <FontAwesomeIcon icon={faChevronLeft} />
+          </button>
+          <ImageViewer
+            product={product}
+            images={images}
+            activeImage={activeImage}
+            setActiveImage={setActiveImage}
+          />
+          <button>
+            <FontAwesomeIcon icon={faChevronRight} />
+          </button>
+        </div>
       </div>
     </dialog>
   );

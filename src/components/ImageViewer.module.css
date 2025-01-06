@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: 1rem;
   width: 80%;
+  margin: auto;
 }
 
 .container img {
@@ -23,6 +24,7 @@
 }
 
 .previews div {
+  background-color: var(--color-white);
   border: solid 2px var(--color-white);
   border-radius: 12px;
   display: flex;
