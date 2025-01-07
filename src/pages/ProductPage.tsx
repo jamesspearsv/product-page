@@ -31,6 +31,7 @@ export default function ProductPage({
         alignItems: 'center',
         gap: '5rem',
         marginTop: '3rem',
+        overflow: 'hidden',
       }}
     >
       <div style={{ display: 'flex', justifyContent: 'center' }}>
