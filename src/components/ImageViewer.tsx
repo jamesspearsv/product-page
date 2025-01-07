@@ -10,6 +10,10 @@ type ImageViewerProps = {
   openLightBox?: () => void;
 };
 
+
+/*
+todo: refactor ImageViewer to include arrow buttons used in mobile view and lightbox
+*/
 export default function ImageViewer({
   product,
   images,
