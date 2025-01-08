@@ -49,16 +49,13 @@
   gap: 3rem;
   align-items: center;
   height: 100%;
-
-  img {
-    height: 50%;
-    width: auto;
-  }
 }
 
 .avatar {
   border: solid 2px var(--color-orange);
   border-radius: 50px;
+  height: 50%;
+  width: auto;
 }
 
 .cartIcon {
@@ -97,6 +94,7 @@
   .nav {
     padding: 0 2rem;
     height: 3.5rem;
+    --transform-transition: transform 500ms;
   }
 
   .closeMenu {
@@ -113,9 +111,9 @@
     background-color: var(--color-white);
     flex-direction: column;
     gap: 0;
-    transition: transform 250ms ease-in-out;
+    transition: var(--transform-transition);
     transform: translateX(-500rem);
-    padding: 1rem;
+    padding: 1.5rem;
     z-index: 1000;
 
     li {
@@ -135,7 +133,7 @@
     background-color: var(--color-black);
     opacity: 75%;
     transform: translateX(-500rem);
-    transition: transform 250ms ease-in-out;
+    transition: var(--transform-transition);
     z-index: 500;
   }
 
@@ -145,5 +143,9 @@
 
   .actionContainer {
     gap: 1rem;
+  }
+
+  .avatar {
+    height: 75%;
   }
 }

@@ -1,6 +1,10 @@
 import styles from './Nav.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import {
+  faBars,
+  faCartShopping,
+  faClose,
+} from '@fortawesome/free-solid-svg-icons';
 import image from '/images/image-avatar.png';
 import { Cart } from '../types/cart';
 import { useState } from 'react';
@@ -26,7 +30,7 @@ export default function Nav({ cart }: NavProps) {
     <nav className={styles.nav}>
       <div className={styles.listContainer}>
         <div className={styles.hamburger} onClick={handleMenuToggle}>
-          =
+          <FontAwesomeIcon icon={faBars} size="xl" />
         </div>
         <div className={styles.wordmark}>sneakers</div>
         <ul
@@ -34,7 +38,7 @@ export default function Nav({ cart }: NavProps) {
           style={menuOpen ? { transform: 'translateX(0)' } : {}}
         >
           <div className={styles.closeMenu} onClick={handleMenuToggle}>
-            x
+            <FontAwesomeIcon icon={faClose} size="xl" />
           </div>
           <li>Collections</li>
           <li>Men</li>
@@ -65,7 +69,6 @@ export default function Nav({ cart }: NavProps) {
             </div>
           )}
         </div>
-
         <img className={styles.avatar} src={image} alt="user avatar image" />
         {cartOpen && <CartPreview cart={cart} />}
       </div>
