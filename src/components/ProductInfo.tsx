@@ -7,7 +7,7 @@ type ProductInfoProps = {
 
 export default function ProductInfo({ product }: ProductInfoProps) {
   return (
-    <div>
+    <div className={styles.infoContainer}>
       <div className={styles.company}>SNEAKER COMPANY</div>
       <h1 className={styles.name}>{product.product_name}</h1>
       <p className={styles.desc}>{product.product_desc}</p>

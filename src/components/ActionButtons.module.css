@@ -14,12 +14,7 @@
   border-radius: 10px;
   padding: 1rem;
 
-  div {
-    flex: 2;
-  }
-
   button {
-    flex: 1;
     border: none;
     background-color: transparent;
     cursor: pointer;
@@ -50,4 +45,19 @@
 
 .addToCart:hover {
   background-color: var(--color-pale-orange);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  .quantityContainer {
+    flex: 1;
+    justify-content: space-evenly;
+  }
+
+  .addToCart {
+    flex: 1;
+  }
 }

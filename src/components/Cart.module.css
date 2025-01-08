@@ -1,7 +1,7 @@
 .cartContainer {
   position: absolute;
-  top: 5rem;
-  right: -5rem;
+  top: 6rem;
+  right: 5rem;
   width: 24rem;
   min-height: 3rem;
   padding: 1rem;
@@ -67,4 +67,14 @@
 
   border: none;
   border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .cartContainer {
+    top: 3.5rem;
+    left: 0;
+    right: 0;
+    width: 90%;
+    margin: auto;
+  }
 }

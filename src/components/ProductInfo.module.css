@@ -35,3 +35,9 @@
   text-decoration-line: line-through;
   font-weight: var(--weight-normal);
 }
+
+@media screen and (max-width: 768px) {
+  .infoContainer {
+    padding: 1rem;
+  }
+}

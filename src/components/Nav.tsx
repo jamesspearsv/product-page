@@ -28,6 +28,7 @@ export default function Nav({ cart }: NavProps) {
 
   return (
     <nav className={styles.nav}>
+      {cartOpen && <CartPreview cart={cart} />}
       <div className={styles.listContainer}>
         <div className={styles.hamburger} onClick={handleMenuToggle}>
           <FontAwesomeIcon icon={faBars} size="xl" />
@@ -70,7 +71,6 @@ export default function Nav({ cart }: NavProps) {
           )}
         </div>
         <img className={styles.avatar} src={image} alt="user avatar image" />
-        {cartOpen && <CartPreview cart={cart} />}
       </div>
     </nav>
   );

@@ -5,6 +5,7 @@ import { Cart, cartUpdater } from '../types/cart';
 import { useState } from 'react';
 import { Product } from '../types/product';
 import LightBox from '../components/Lightbox';
+import styles from './ProductPage.module.css';
 
 type ProductPageProps = {
   product: Product;
@@ -24,15 +25,7 @@ export default function ProductPage({
   const [lightboxOpen, setLightboxOpen] = useState(false);
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        gap: '5rem',
-        marginTop: '3rem',
-        overflow: 'hidden',
-      }}
-    >
+    <div className={styles.pageContainer}>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <ImageViewer
           images={product.images}
