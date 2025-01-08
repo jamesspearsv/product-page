@@ -46,16 +46,4 @@
   gap: 0;
   justify-content: center;
   align-items: center;
-
-  button {
-    background-color: var(--color-white);
-    border-radius: 100%;
-    border: none;
-    padding: 0.5rem 0.6rem;
-    transform: translateY(-2rem);
-  }
-
-  button:hover {
-    color: var(--color-orange);
-  }
 }

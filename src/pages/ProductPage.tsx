@@ -17,11 +17,10 @@ export default function ProductPage({
   cart,
   updateCart,
 }: ProductPageProps) {
-  // get an array of keys from product images object
-  const images = Object.keys(product.images);
-  // track active images and default to index 0
-  // key for product.images i.e. -- image1
-  const [activeImage, setActiveImage] = useState(images[0]);
+  // track active images and default image
+  const [activeImage, setActiveImage] = useState(
+    Object.keys(product.images)[0]
+  );
   const [lightboxOpen, setLightboxOpen] = useState(false);
 
   return (
@@ -36,11 +35,9 @@ export default function ProductPage({
     >
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <ImageViewer
-          product={product}
-          images={images}
+          images={product.images}
           activeImage={activeImage}
           setActiveImage={setActiveImage}
-          preview
           openLightBox={() => setLightboxOpen(true)}
         />
       </div>
@@ -51,8 +48,7 @@ export default function ProductPage({
       <LightBox
         open={lightboxOpen}
         closeLightBox={() => setLightboxOpen(false)}
-        product={product}
-        images={images}
+        images={product.images}
         activeImage={activeImage}
         setActiveImage={setActiveImage}
       />

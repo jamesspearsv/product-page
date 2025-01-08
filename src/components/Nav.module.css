@@ -87,7 +87,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  /* todo: reduct duplibation in mobile rule sets */
+  /* todo: reduce duplication in mobile rule sets */
   .hamburger,
   .closeMenu,
   .overlay {
