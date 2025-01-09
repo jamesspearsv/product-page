@@ -14,7 +14,7 @@
 
 .lightbox::backdrop {
   background-color: var(--color-black);
-  opacity: 90%;
+  opacity: 94%;
 }
 
 .lightbox > div {

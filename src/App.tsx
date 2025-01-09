@@ -41,7 +41,7 @@ function App() {
 
   return (
     <>
-      <Nav cart={cart} />
+      <Nav cart={cart} setCart={setCart} />
       <main>
         <ProductPage cart={cart} updateCart={updateCart} product={PRODUCT} />
       </main>

@@ -5,10 +5,10 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 type CartPreviewProps = {
   cart: Cart;
+  setCart: (newCart: Cart) => void;
 };
 
-export default function CartPreview({ cart }: CartPreviewProps) {
-  console.log(cart);
+export default function CartPreview({ cart, setCart }: CartPreviewProps) {
   return (
     <div className={styles.cartContainer}>
       <h4>Cart</h4>
@@ -25,8 +25,8 @@ export default function CartPreview({ cart }: CartPreviewProps) {
         </div>
       ) : (
         <>
-          {cart.map((item) => (
-            <div className={styles.cartItem}>
+          {cart.map((item, index) => (
+            <div key={index} className={styles.cartItem}>
               <img src={item.image} />
               <div className={styles.itemInfo}>
                 <div className={styles.itemName}>{item.name}</div>
@@ -39,7 +39,14 @@ export default function CartPreview({ cart }: CartPreviewProps) {
                   </span>
                 </div>
               </div>
-              <button className={styles.trashButton}>
+              <button
+                className={styles.trashButton}
+                onClick={() => {
+                  const newCart = [...cart];
+                  newCart.splice(index, 1);
+                  setCart(newCart);
+                }}
+              >
                 <FontAwesomeIcon
                   icon={faTrash}
                   className={styles.trashIcon}

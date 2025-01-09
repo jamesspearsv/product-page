@@ -12,9 +12,10 @@ import CartPreview from './Cart';
 
 type NavProps = {
   cart: Cart;
+  setCart: (newCart: Cart) => void;
 };
 
-export default function Nav({ cart }: NavProps) {
+export default function Nav({ cart, setCart }: NavProps) {
   const [cartOpen, setCartOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -28,7 +29,7 @@ export default function Nav({ cart }: NavProps) {
 
   return (
     <nav className={styles.nav}>
-      {cartOpen && <CartPreview cart={cart} />}
+      {cartOpen && <CartPreview cart={cart} setCart={setCart} />}
       <div className={styles.listContainer}>
         <div className={styles.hamburger} onClick={handleMenuToggle}>
           <FontAwesomeIcon icon={faBars} size="xl" />
